@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weighted Product Method - Results</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weighted Product Method - Results</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Alternative</th>
+                    <th>V Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i, v in enumerate(v_values) %}
+                <tr>
+                    <td>Alternative {{ i + 1 }}</td>
+                    <td>{{ v|round(4) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
